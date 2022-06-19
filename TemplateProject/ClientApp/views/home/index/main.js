@@ -1,5 +1,5 @@
 ﻿import Vue from 'vue'
-import SearchBar from "../../../components/SearchBar.vue";
+import App from './HomeIndexController.vue'
 import { BootstrapVue } from "bootstrap-vue";
 
 Vue.use(BootstrapVue);
@@ -7,5 +7,5 @@ Vue.use(BootstrapVue);
 
 const app = new Vue({
     el: '#app',
-    render: h => h(SearchBar)
+    render: h => h(App)
 })

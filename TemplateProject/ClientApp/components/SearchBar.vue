@@ -20,12 +20,12 @@
 
 <script>
     export default {
-        name: "HelloWorld",
+        name: "SearchBar",
 
         data() {
             return {
-                message: 'Welcome to Vue 3!',
-                atestvalue: 1111
+                message: 'Welcome to Vue 3hhhh!',
+                atestvalue: 678
             };
         },
         methods: {

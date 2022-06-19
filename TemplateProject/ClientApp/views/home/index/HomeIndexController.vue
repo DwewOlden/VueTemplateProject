@@ -1,20 +1,22 @@
 ﻿<template>
-  <div id="app-container">
-  hhhhh
-  </div>
+    <div>
+    Hello {{ name }} from Vue!
+        </div>
 </template>
 
 <script>
- 
- 
-  
-
+export default {
+  name: "HelloWorld",
+  data() {
+    return {
+      name: "world",
+    }
+  },
+}
 </script>
-
-<style>
-  #app-container {
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
+<style scoped lang="scss">
+$fontColor: #FFF;
+.test-scoped-css {
+  color: $fontColor;
+}
 </style>

@@ -1,13 +1,11 @@
 ﻿<template>
   <div id="app-container">
-  
+  hhhhh
   </div>
 </template>
 
 <script>
  
-    import HelloWorld from '../../../components/HelloWorld.vue'
-
  
   
 

@@ -1,22 +1,27 @@
 ﻿<template>
-    <div id="app">
-        <h1>{{message}}</h1>{{atestvalue}}
+    <b-container>
+        <b-row>
+            <b-input-group class="mt-3">
+                <b-form-input></b-form-input>
+                <b-input-group-append>
+                    <b-button @click="doSomethingElse" variant="info">Button</b-button>
+                </b-input-group-append>
+            </b-input-group>
+        </b-row>>
 
-        <p>
-            Learn more with the
-            <a href="https://v3.vuejs.org/"
-               target="_blank"
-               rel="noopener">Vue Docs &amp; Resources</a>.
-        </p>
+        <div class="row">
+            <h1>{{message}}</h1>{{atestvalue}}
+        </div>
 
         <button @click="doSomething">Say hello.</button>
-    </div>
+        
+    </b-container>
 </template>
 
 <script>
     export default {
         name: "HelloWorld",
-        
+
         data() {
             return {
                 message: 'Welcome to Vue 3!',
@@ -26,10 +31,13 @@
         methods: {
             doSomething() {
                 this.atestvalue = 8766;
+            },
+            doSomethingElse() {
+                console.debug('hello, the button has been clicked');
             }
         },
         created() {
-            
+
         }
     };
 </script>

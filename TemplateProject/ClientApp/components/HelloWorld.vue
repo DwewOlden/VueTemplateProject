@@ -1,17 +1,17 @@
 ﻿<template>
-  <div class="hello">
-    <p>{{ message }}</p>
-  </div>
+    <div class="hello">
+        This is a child component
+    </div>
 </template>
 
 <script>
     export default {
-        props: ['message']
+        name: "HelloWorld"
     }
 </script>
 
 <style scoped>
-  p {
-    color: red;
-  }
+    p {
+        color: red;
+    }
 </style>

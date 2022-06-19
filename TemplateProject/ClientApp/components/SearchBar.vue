@@ -7,14 +7,7 @@
                     <b-button @click="doSomethingElse" variant="info">Button</b-button>
                 </b-input-group-append>
             </b-input-group>
-        </b-row>>
-
-        <div class="row">
-            <h1>{{message}}</h1>{{atestvalue}}
-        </div>
-
-        <button @click="doSomething">Say hello.</button>
-        
+        </b-row>
     </b-container>
 </template>
 

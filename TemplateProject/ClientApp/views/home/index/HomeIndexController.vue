@@ -1,12 +1,14 @@
 ﻿<template>
     <div>
-    Hello {{ name }} from Vue!
-        </div>
+        Hello {{ name }} from Vue!
+        <hello-world></hello-world>
+        <search-bar></search-bar>
+    </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "HomeIndexController",
   data() {
     return {
       name: "world",

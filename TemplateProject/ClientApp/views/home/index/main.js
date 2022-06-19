@@ -1,5 +1,5 @@
-﻿import Vue from 'vue'
-import App from './HomeIndexController.vue'
+﻿import Vue from 'vue';
+import App from './HomeIndexController.vue';
 import { BootstrapVue } from "bootstrap-vue";
 
 Vue.use(BootstrapVue);

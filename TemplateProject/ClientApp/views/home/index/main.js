@@ -4,6 +4,7 @@ import { BootstrapVue } from "bootstrap-vue";
 
 Vue.component('hello-world', () => import('../../../components/HelloWorld.vue'));
 Vue.component('search-bar', () => import('../../../components/SearchBar.vue'));
+Vue.component('filter-text', () => import('../../../components/FilterText.vue'));
 
 Vue.use(BootstrapVue);
 

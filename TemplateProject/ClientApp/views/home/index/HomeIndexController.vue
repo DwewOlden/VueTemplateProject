@@ -1,6 +1,7 @@
 ﻿<template>
     <div>
-        <search-bar v-on:notify="onClickChild()"></search-bar>
+        <search-bar v-on:notify="onClickChild()" v-on:searchtextupdated="onSearchTextUpdated()"></search-bar>
+        <filter-text :msg="filtertext"></filter-text>
     </div>
 </template>
 
@@ -9,12 +10,16 @@
         name: "HomeIndexController",
         data() {
             return {
-                filtertext:''
+                filtertext: ''
             }
         },
         methods: {
             onClickChild() {
                 this.filtertext = '';
+            },
+            onSearchTextUpdated(myfiltertext) {
+                console.debug(myfiltertext);
+                this.filtertext = myfiltertext;
             }
         }
     }

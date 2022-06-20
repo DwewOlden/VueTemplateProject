@@ -2,7 +2,7 @@
     <b-container>
         <b-row>
             <b-input-group class="mt-3">
-                <b-form-input></b-form-input>
+                <b-form-input v-model="filtertext" @change="searchTextChange"></b-form-input>
                 <b-input-group-append>
                     <b-button @click="clearTextClicked" variant="info">Clear</b-button>
                 </b-input-group-append>
@@ -21,6 +21,10 @@
             };
         },
         methods: {
+            searchTextChange() {
+                console.debug(this.filtertext);
+                this.$emit('searchtextupdated', { myfiltertext: this.filtertext });
+            },
             clearTextClicked() {
                 this.filtertext = '';
                 this.$emit('notify');

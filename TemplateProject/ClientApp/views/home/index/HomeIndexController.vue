@@ -1,24 +1,28 @@
 ﻿<template>
     <div>
-        Hello {{ name }} from Vue!
-        <hello-world></hello-world>
-        <search-bar></search-bar>
+        <search-bar v-on:notify="onClickChild()"></search-bar>
     </div>
 </template>
 
 <script>
-export default {
-  name: "HomeIndexController",
-  data() {
-    return {
-      name: "world",
+    export default {
+        name: "HomeIndexController",
+        data() {
+            return {
+                filtertext:''
+            }
+        },
+        methods: {
+            onClickChild() {
+                this.filtertext = '';
+            }
+        }
     }
-  },
-}
 </script>
 <style scoped lang="scss">
-$fontColor: #FFF;
-.test-scoped-css {
-  color: $fontColor;
-}
+    $fontColor: #FFF;
+
+    .test-scoped-css {
+        color: $fontColor;
+    }
 </style>

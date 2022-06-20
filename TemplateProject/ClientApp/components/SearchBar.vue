@@ -4,7 +4,7 @@
             <b-input-group class="mt-3">
                 <b-form-input></b-form-input>
                 <b-input-group-append>
-                    <b-button @click="doSomethingElse" variant="info">Button</b-button>
+                    <b-button @click="clearTextClicked" variant="info">Clear</b-button>
                 </b-input-group-append>
             </b-input-group>
         </b-row>
@@ -17,16 +17,13 @@
 
         data() {
             return {
-                message: 'Welcome to Vue 3hhhh!',
-                atestvalue: 678
+                filtertext: ''
             };
         },
         methods: {
-            doSomething() {
-                this.atestvalue = 8766;
-            },
-            doSomethingElse() {
-                console.debug('hello, the button has been clicked');
+            clearTextClicked() {
+                this.filtertext = '';
+                this.$emit('notify');
             }
         },
         created() {
@@ -35,7 +32,6 @@
     };
 </script>
 
-<!-- Use preprocessors via the lang attribute! e.g. <style lang="scss"> -->
 <style>
     #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;

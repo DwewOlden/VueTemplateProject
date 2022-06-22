@@ -2,8 +2,7 @@
     <div>
         <search-bar v-on:notify="onClickChild()" v-on:searchtextupdated="onSearchTextUpdated"></search-bar>
         <filter-text :msg="filtertext"></filter-text>
-        <school-table :schoollist="schooldata"></school-table>
-        {{schooldata}}
+        <school-table :schoollist="schooldata" :filtertext="filtertext"></school-table>
     </div>
 </template>
 

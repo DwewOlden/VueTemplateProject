@@ -2,6 +2,7 @@
     <div>
         <search-bar v-on:notify="onClickChild()" v-on:searchtextupdated="onSearchTextUpdated"></search-bar>
         <filter-text :msg="filtertext"></filter-text>
+        {{schooldata}}
     </div>
 </template>
 
@@ -10,7 +11,8 @@
         name: "HomeIndexController",
         data() {
             return {
-                filtertext: ''
+                filtertext: '',
+                schooldata:[]
             }
         },
         methods: {
@@ -20,6 +22,11 @@
             onSearchTextUpdated(e) {
                 this.filtertext = e;
             }
+        },
+        mounted() {
+            fetch("https://localhost:7269/School")
+                .then(response => response.json())
+                .then(data => (this.schooldata = data));
         }
     }
 </script>

@@ -2,7 +2,7 @@
     <b-container>
         <b-row>
             <b-input-group class="mt-3">
-                <b-form-input v-model="filtertext" @change="searchTextChange"></b-form-input>
+                <b-form-input typeof="search" v-model="filtertext" @blur="focusOut($event,filtertext)"></b-form-input>
                 <b-input-group-append>
                     <b-button @click="clearTextClicked" variant="info">Clear</b-button>
                 </b-input-group-append>
@@ -21,13 +21,22 @@
             };
         },
         methods: {
-            searchTextChange() {
-                console.debug(this.filtertext);
-                this.$emit('searchtextupdated', { myfiltertext: this.filtertext });
+            focusOut: function (event,fx1) {
+                console.debug('in the focus out method');
+                console.debug('cx1:' + fx1);
+                this.$emit('searchtextupdated', fx1);
+            },
+
+            searchtextchange() {
+                console.debug('inthechainmethod');
+               /* this.$emit('searchtextupdated', 'hello world' );*/
             },
             clearTextClicked() {
                 this.filtertext = '';
                 this.$emit('notify');
+            },
+            onChange() {
+                console.debug('onChange')
             }
         },
         created() {
